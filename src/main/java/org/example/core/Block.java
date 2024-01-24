@@ -62,8 +62,8 @@ public class Block {
 
     public String getBlockHash() {
         String transactionInfo = "";
-        for(int i = 0; i < transactionList.size();i++) {
-            transactionInfo += transactionList.get(i).getInfo();
+        for (Transaction transaction : transactionList) {
+            transactionInfo += transaction.getInfo();
         }
         return Util.getHash(nonce + transactionInfo + previousBlockHash);
     }

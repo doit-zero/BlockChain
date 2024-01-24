@@ -12,16 +12,14 @@ public class BlockChainStarter {
         block1.getInfo();
 
         Block block2 = new Block(2, block1.getPreviousBlockHash(), 0,new ArrayList<>());
-        block2.addTransaction(new Transaction("유재준","나동빈",3));
-        block2.addTransaction(new Transaction("최성실","유재준",2));
+        block2.addTransaction(new Transaction("유재준","박주형",100));
+        block2.addTransaction(new Transaction("최성실","유재준",20000));
         block2.getInfo();
 
         Block block3 = new Block(3, block2.getPreviousBlockHash(), 0,new ArrayList<>());
         block3.addTransaction(new Transaction("준","빈",55));
         block3.addTransaction(new Transaction("최","준",22));
         block3.getInfo();
-
-
 
     }
 }
